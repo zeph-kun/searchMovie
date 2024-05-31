@@ -2,3 +2,4 @@
 db.sqlite3
 searchMovie/__pycache__/
 searchMovie/migrations/
+app/migrations/

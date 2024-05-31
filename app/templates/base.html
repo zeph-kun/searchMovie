@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% block title %}
+        <title>Bibliothèque de films</title>
+    {% endblock %}
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="bg-gray-200 py-2">
+        <nav class="flex justify-between px-4 sm:px-6 lg:px-10 xl:px-12">
+            <form method="post" action="{% url 'index' %}" class="flex items-center">
+                {% csrf_token %}
+                {{ form }}
+                <div class="flex space-between">
+                    <button type="submit" value="Submit" hidden></button>
+                </div>
+            </form>
+        </nav>
+    </header>
+
+    {% block content %}
+
+    {% endblock content %}
+</body>
+</html>
